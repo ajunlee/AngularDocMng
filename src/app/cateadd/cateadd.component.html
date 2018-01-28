@@ -1,0 +1,98 @@
+<div class="row">
+  <div class="col">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item active">新增工程</li>
+      </ol>
+    </nav>
+    <ngb-tabset>
+      <ngb-tab title="工程資料">
+        <ng-template ngbTabContent>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="tbx1">工程名稱</label>
+              <input type="text" class="form-control" id="tbx1" placeholder="工程名稱">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="sel1">所屬單位</label>
+              <select id="sel1" class="form-control">
+                <option selected>請選擇</option>
+                <option>淡海工務所</option>
+                <option>安坑工務所</option>
+                <option>土木開發科</option>
+                <option>土木建築科</option>
+                <option>工程管理科</option>
+                <option>機電系統科</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="tbx1">關鍵字</label>
+            <input type="text" class="form-control" id="tbx1" placeholder="關鍵字">
+          </div>
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab title="文件結構">
+        <ng-template ngbTabContent>
+          <div class="form-group">
+            <label for="tbx1">技術文件結構</label>
+            <div>
+              <div>
+                <div class="input-group mb-3">
+                  <select class="custom-select" id="inputGroupSelect04">
+                    <option selected>Choose...</option>
+                    <option value="1">淡海線輕軌工程</option>
+                    <option value="2">安坑線輕軌工程</option>
+                    <option value="3">三鶯線輕軌工程</option>
+                    <option value="3">環狀線工程</option>
+                    <option value="3">萬大中和樹林線</option>
+                    <option value="3">其他類</option>
+                  </select>
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button">複製其他工程資料結構</button>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <button class="btn btn-primary btn-sm">新增階段</button>
+                </div>
+              </div>
+
+              <div class="stage">
+                <h6>企畫階段</h6>
+                <div>
+                  <button class="btn btn-primary btn-sm">新增類別</button>
+                </div>
+                <div>
+                  <span class="badge badge-light badge-sm">網路規劃
+                    <a href="#">
+                      <i class="material-icons md-12">clear</i>
+                    </a>
+                  </span>
+                  <span class="badge badge-light badge-sm">機電設施規模研究
+                    <a href="#">
+                      <i class="material-icons md-12">clear</i>
+                    </a>
+                  </span>
+                  <span class="badge badge-light badge-sm">走廊研究
+                    <a href="#">
+                      <i class="material-icons md-12">clear</i>
+                    </a>
+                  </span>
+                  <span class="badge badge-light badge-sm">測試中
+                    <a href="#">
+                      <i class="material-icons md-12">clear</i>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </ngb-tab>
+    </ngb-tabset>
+    <hr>
+    <div class="float-right">
+      <button type="button" class="btn btn-primary btn-sm">新增</button>
+    </div>
+  </div>
+</div>

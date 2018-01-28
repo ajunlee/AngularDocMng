@@ -1,0 +1,65 @@
+<div class="row">
+  <div class="col">
+      <h3>捷運工程列表</h3>
+    <div class="float-right">
+          <a href="cateadd" class="btn btn-primary btn-sm" title="新增"><i class="material-icons">add</i></a>
+        </div>
+        <ngb-pagination [collectionSize]="120" [(page)]="page" [maxSize]="5" [rotate]="true" [boundaryLinks]="true"></ngb-pagination>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">工程編號</th>
+          <th scope="col">名稱</th>
+          <th scope="col">資料下載次數</th>
+          <th scope="col">檔案總數</th>
+          <th scope="col">最後更新部門/時間</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">A0001</th>
+          <td><a href="doclist">淡海線輕軌工程</a></td>
+          <td>1023</td>
+          <td>5000</td>
+          <td>淡海工務所 <span class="badge badge-light">2018-01-03 17:22</span></td>
+        </tr>
+        <tr>
+          <th scope="row">A0002</th>
+          <td><a href="doclist">安坑線輕軌工程</a></td>
+          <td>1023</td>
+          <td>5000</td>
+          <td>安坑工務所 <span class="badge badge-light">2018-01-03 17:22</span></td>
+        </tr>
+        <tr>
+          <th scope="row">A0003</th>
+          <td><a href="doclist">三鶯線輕軌工程</a></td>
+          <td>1023</td>
+          <td>5000</td>
+          <td>土木開發科 <span class="badge badge-light">2018-01-03 17:22</span></td>
+        </tr>
+        <tr>
+          <th scope="row">A0004</th>
+          <td><a href="doclist">環狀線工程</a></td>
+          <td>1023</td>
+          <td>5000</td>
+          <td>土木建築科<span class="badge badge-light">2018-01-03 17:22</span></td>
+        </tr>
+        <tr>
+            <th scope="row">A0004</th>
+            <td><a href="doclist">萬大中和樹林線</a></td>
+            <td>1023</td>
+            <td>5000</td>
+            <td>工程管理科<span class="badge badge-light">2018-01-03 17:22</span></td>
+        </tr>
+        <tr>
+            <th scope="row">A0004</th>
+            <td><a href="doclist">其他類</a></td>
+            <td>1023</td>
+            <td>5000</td>
+            <td>機電系統科<span class="badge badge-light">2018-01-03 17:22</span></td>
+          </tr>
+        </tbody>
+    </table>
+    <ngb-pagination [collectionSize]="120" [(page)]="page" [maxSize]="5" [rotate]="true" [boundaryLinks]="true"></ngb-pagination>
+  </div>
+</div>

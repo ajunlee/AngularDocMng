@@ -1,0 +1,102 @@
+<div class="row">
+  <div class="col">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="doclist">淡海線輕軌工程</a></li>
+        <li class="breadcrumb-item"><a href="doclist?id=123&lid=123">網路規劃</a></li>
+        <li class="breadcrumb-item active" aria-current="page">文件上傳</li>
+      </ol>
+    </nav>
+    <form enctype="multipart/form-data">
+    <ngb-tabset>
+      <ngb-tab title="檔案列表">
+        <ng-template ngbTabContent>
+          <span class="btn btn-light btn-sm btn-file">
+              選擇檔案... <input class="form-control-file" type="file" multiple="" (change)="fileChangeEvent($event)" />
+          </span>
+          <button class="btn btn-danger btn-sm" *ngIf="filesToUpload.length>0" (click)="removeAll()">移除全部</button>
+            <div *ngIf="filesToUpload">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>編號</th>
+                      <th>檔案名稱</th>
+                      <th>檔案關鍵字</th>
+                      <th>移除</th>
+                    </tr>
+                  </thead>
+                  <tr *ngFor="let file of filesToUpload; let i = index">
+                    <td>{{i+1}}</td>
+                    <td>{{file.name}}<br>
+                    <span class="badge badge-secondary">{{file.type}}</span>
+                    </td>
+                    <td><input type="text" class="form-control" placeholder="關鍵字, 關鍵字2"></td>
+                    <td><button class="btn btn-link btn-sm" (click)="remove(file)"><i class="material-icons">remove_circle_outline</i></button></td>
+                  </tr>
+                </table>
+              </div>
+          </ng-template>
+      </ngb-tab>
+      <ngb-tab title="檔案共同屬性">
+        <ng-template ngbTabContent>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="tbx1">標案名稱</label>
+              <input type="text" class="form-control" id="tbx1" placeholder="標案名稱">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="sel1">所屬單位</label>
+                <select id="sel1" class="form-control">
+                    <option selected>請選擇</option>
+                    <option>淡海工務所</option>
+                    <option>安坑工務所</option>
+                    <option>土木開發科</option>
+                    <option>土木建築科</option>
+                    <option>工程管理科</option>
+                    <option>機電系統科</option>
+                  </select>
+              </div>
+          </div>
+          <div class="form-row">
+              <div class="form-group col-md-4">
+                  <label for="tbx2">契約名稱</label>
+                  <input type="text" class="form-control" id="tbx2" placeholder="契約名稱">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="tbx3">契約編號</label>
+                    <input type="text" class="form-control" id="tbx3" placeholder="契約編號">
+                  </div>
+                  <div class="form-group col-md-4">
+                      <label for="tbx4">文號</label>
+                      <input type="text" class="form-control" id="tbx4" placeholder="文號">
+                    </div>
+              </div>
+              <div class="form-row">
+                  <div class="form-group col-md-2">
+                      <label for="tbx2">資料是否開放</label>
+                      <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="gridCheck1">
+                          <label class="form-check-label" for="gridCheck1">
+                            開放
+                          </label>
+                        </div>
+
+                    </div>
+                    <div class="form-group col-md-10">
+                        <label for="tbx2">關鍵字</label>
+                        <input type="text" class="form-control" id="tbx2" placeholder="關鍵字">
+                      </div>
+                  </div>
+        </ng-template>
+
+      </ngb-tab>
+    </ngb-tabset>
+<hr>
+    <div class="float-right">
+      <button type="button" class="btn btn-primary btn-sm">檔案上傳</button>
+    </div>
+
+    </form>
+
+  </div>
+</div>
